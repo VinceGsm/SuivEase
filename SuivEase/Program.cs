@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
 using SuivEase.Components;
 using SuivEase.Components.Account;
-using SuivEase.Data;
+using DAL.Data;
 
 
 try

@@ -21,7 +21,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj" />
+    <ProjectReference Include="..\Business\Business.csproj" />
     <ProjectReference Include="..\SuivEase.Client\SuivEase.Client.csproj" />
     <ProjectReference Include="..\SuivEase.Orchestrator\SuivEase.Orchestrator.ServiceDefaults\SuivEase.Orchestrator.ServiceDefaults.csproj" />
   </ItemGroup>

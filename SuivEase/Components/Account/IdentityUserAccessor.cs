@@ -1,5 +1,5 @@
+using DAL.Data;
 using Microsoft.AspNetCore.Identity;
-using SuivEase.Data;
 
 namespace SuivEase.Components.Account;
 

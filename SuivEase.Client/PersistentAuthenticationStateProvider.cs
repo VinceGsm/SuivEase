@@ -1,4 +1,4 @@
-using DAL.User;
+using Business.User;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Security.Claims;

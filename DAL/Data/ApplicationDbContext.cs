@@ -2,7 +2,7 @@ using DAL.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace SuivEase.Data;
+namespace DAL.Data;
 
 
 // Identity DbContext

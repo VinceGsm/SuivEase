@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace SuivEase.Data
+namespace DAL.Data
 {
     public class ApplicationRole : IdentityRole<Guid>
     {
-       /* public ApplicationRole() : base()
+        public ApplicationRole() : base()
         { }
 
         public ApplicationRole(string roleName) : base(roleName)
@@ -19,6 +19,6 @@ namespace SuivEase.Data
         {
             get { return base.Id; }
             set { base.Id = value; }
-        }*/
+        }
     }
 }

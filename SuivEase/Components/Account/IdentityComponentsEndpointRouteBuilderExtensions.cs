@@ -1,5 +1,4 @@
-using System.Security.Claims;
-using System.Text.Json;
+using DAL.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -8,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
 using SuivEase.Components.Account.Pages;
 using SuivEase.Components.Account.Pages.Manage;
-using SuivEase.Data;
+using System.Security.Claims;
+using System.Text.Json;
 
 namespace Microsoft.AspNetCore.Routing;
 

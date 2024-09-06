@@ -1,6 +1,6 @@
+using DAL.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using SuivEase.Data;
 
 namespace SuivEase.Components.Account;
 

@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SuivEase.Data;
+using DAL.Data;
 using DAL.Models;
+using DAL.I.Repos;
 
-namespace SuivEase.Repos;
+namespace DAL.Repos;
 
-/// <summary>
-/// Database Logic
-/// </summary>
+
 public class SuiviRepository : ISuiviRepository
 {
     private readonly ApplicationDbContext _context;

@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Business.I.Services;
+using DAL.I.Repos;
 using DAL.Models;
-using SuivEase.Repos;
 
-namespace SuivEase.Services;
+namespace Business.Services;
 
-/// <summary>
-/// Business Logic
-/// </summary>
+
 public class SuiviService : ISuiviService
 {
     private readonly ISuiviRepository _suiviRepo;
@@ -56,34 +54,3 @@ public class SuiviService : ISuiviService
         return await _suiviRepo.IsInDb(id);
     }
 }
-
-/* example double dbcontext
- 
- public interface IDataService
-{
-    List<Employee> GetEmployees(string gender);
-}
-public class DataService : IDataService
-{
-    private readonly SecondDbContext _context;
-    public DataService(SecondDbContext secondDbContext)
-    {
-        _context = secondDbContext;
-    }
-    public List<Employee> GetEmployees(string gender)
-    {
-        var result  = new List<Employee>();
-        if(string.IsNullOrEmpty(gender))
-        {
-            result= _context.Employees.ToList();
-        }
-        else
-        {
-          result  = _context.Employees.Where(c => c.Gender == gender).ToList();
-        }
-
-        return result;
-
-    }
-} 
- */

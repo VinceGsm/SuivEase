@@ -8,9 +8,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuivEase.Client", "SuivEase
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{EBE15788-8F5B-4A62-B698-608F026CCFDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuivEase.Orchestrator.AppHost", "SuivEase.Orchestrator\SuivEase.Orchestrator.AppHost\SuivEase.Orchestrator.AppHost.csproj", "{BD2AF148-1792-45F0-9543-3DEFE4BF7055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuivEase.Orchestrator.AppHost", "SuivEase.Orchestrator\SuivEase.Orchestrator.AppHost\SuivEase.Orchestrator.AppHost.csproj", "{BD2AF148-1792-45F0-9543-3DEFE4BF7055}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuivEase.Orchestrator.ServiceDefaults", "SuivEase.Orchestrator\SuivEase.Orchestrator.ServiceDefaults\SuivEase.Orchestrator.ServiceDefaults.csproj", "{020690F6-C362-42F3-8E8F-C7E5CFAEF7CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +84,18 @@ Global
 		{020690F6-C362-42F3-8E8F-C7E5CFAEF7CF}.Release|x64.Build.0 = Release|Any CPU
 		{020690F6-C362-42F3-8E8F-C7E5CFAEF7CF}.Release|x86.ActiveCfg = Release|Any CPU
 		{020690F6-C362-42F3-8E8F-C7E5CFAEF7CF}.Release|x86.Build.0 = Release|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Debug|x64.Build.0 = Debug|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Debug|x86.Build.0 = Debug|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Release|x64.ActiveCfg = Release|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Release|x64.Build.0 = Release|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Release|x86.ActiveCfg = Release|Any CPU
+		{BD373501-76F6-46DA-A5AF-16A83F1BA5B8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

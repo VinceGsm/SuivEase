@@ -1,4 +1,5 @@
-using DAL.User;
+using Business.User;
+using DAL.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
@@ -6,7 +7,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using SuivEase.Data;
+using DAL.Data;
 using System.Diagnostics;
 using System.Security.Claims;
 

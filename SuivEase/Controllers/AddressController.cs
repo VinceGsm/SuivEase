@@ -1,6 +1,6 @@
-﻿using DAL.Models;
+﻿using Business.I.Services;
+using DAL.Models;
 using Microsoft.AspNetCore.Mvc;
-using SuivEase.Services;
 
 namespace SuivEase.Controllers;
 
