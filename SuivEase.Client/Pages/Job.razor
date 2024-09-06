@@ -1,0 +1,70 @@
+﻿@page "/job"
+@using DAL.User
+
+
+<PageTitle>Jobs</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Suivis de vos Jobs</MudText>
+<br />
+<MudText Typo="Typo.h5" GutterBottom="true">Description page</MudText>
+<br />
+
+
+@if (suivis != null)
+{
+     <MudTable Items="suivis" Hover="true" SortLabel="Sort By" Elevation="0" AllowUnsorted="false">     
+        <HeaderContent>
+
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Title!)">Titre</MudTableSortLabel></MudTh> @* TO DO : Mettre href de l'offre sur le titre *@
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Priority)">Priorité</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Status)">Status</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel InitialDirection="SortDirection.Ascending" SortBy="new Func<Suivi, object>(x=>x.LastInteractionDate)">Dernière interraciton</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Deadline)">Deadline</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.NextInteraction)">Prochaine Interraction</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Price!)">Salaire</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Note!)">Note</MudTableSortLabel></MudTh>
+
+            @* TO DO : faire des test avec et sans '!' <MudTh><MudTableSortLabel SortBy="new Func<Suivi, object>(x=>x.Note!)">Note</MudTableSortLabel></MudTh> *@
+            @* TO DO : pas toute les colonnes triable  *@
+
+            @* TO DO : avoir un bouton pour Contact+Adr ----> Pop-Up *@
+        </HeaderContent>
+
+        <RowTemplate>
+            @* TO DO : handle Enum ?? *@
+
+            <MudTd DataLabel="Title">@context.Title</MudTd>
+            <MudTd DataLabel="Priority">@context.Priority</MudTd>
+            <MudTd DataLabel="Status">@context.Status</MudTd>
+            <MudTd DataLabel="LastInteractionDate">@context.LastInteractionDate</MudTd>
+            <MudTd DataLabel="Deadline">@context.Deadline</MudTd>
+            <MudTd DataLabel="NextInteraction">@context.NextInteraction</MudTd>
+            <MudTd DataLabel="Price">@context.Price</MudTd>
+            <MudTd DataLabel="Note">@context.Note</MudTd> 
+
+        </RowTemplate>
+
+        <PagerContent>
+            <MudTablePager PageSizeOptions="new int[]{10, 25}" />
+        </PagerContent>
+    </MudTable>    
+}
+else
+{ <MudProgressCircular Color="Color.Default" Indeterminate="true" /> }
+
+
+@code{
+    private Suivi[]? suivis = null;    
+
+    protected override async Task OnInitializedAsync()
+    {
+        // var startDate = DateOnly.FromDateTime(DateTime.Now);
+        // var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
+        // suivis = Enumerable.Range(1, 5).Select(index => new Suivi
+        //     {
+        //         Date = startDate.AddDays(index),
+        //         TemperatureC = Random.Shared.Next(-20, 55),
+        //         Summary = summaries[Random.Shared.Next(summaries.Length)]
+        //     }).ToArray();
+    }
+}
