@@ -1,4 +1,4 @@
-﻿namespace DAL.I.Repos;
+﻿namespace DAL.Repos;
 
 public interface IContactRepository
 {

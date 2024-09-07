@@ -1,10 +1,12 @@
+using Business.Services;
+using DAL.Data;
+using DAL.Repos;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
 using SuivEase.Components;
 using SuivEase.Components.Account;
-using DAL.Data;
 
 
 try
@@ -49,10 +51,15 @@ try
     .AddDefaultTokenProviders();
 
     //Service    
-    //builder.Services.AddTransient<ISuiviService, SuiviService>();
-    //builder.Services.AddTransient<IContactService, ContactService>();
-    //builder.Services.AddTransient<IAddressService, AddressService>();
-    
+    builder.Services.AddTransient<ISuiviService, SuiviService>();
+    builder.Services.AddTransient<IContactService, ContactService>();
+    builder.Services.AddTransient<IAddressService, AddressService>();
+
+    //Repos
+    builder.Services.AddTransient<ISuiviRepository, SuiviRepository>();
+    builder.Services.AddTransient<IAddressRepository, AddressRepository>();
+    builder.Services.AddTransient<IContactRepository, ContactRepository>();
+
     builder.Services.AddSwaggerGen(); // Swagger
 
     // TO DO : comprendre ?

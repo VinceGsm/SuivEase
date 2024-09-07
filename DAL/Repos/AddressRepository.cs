@@ -1,7 +1,6 @@
-﻿using DAL.Models;
+﻿using DAL.Data;
+using DAL.Models;
 using Microsoft.EntityFrameworkCore;
-using DAL.Data;
-using DAL.I.Repos;
 
 namespace DAL.Repos;
 

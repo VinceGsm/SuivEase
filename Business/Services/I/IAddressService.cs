@@ -1,6 +1,6 @@
 ﻿using DAL.Models;
 
-namespace Business.I.Services;
+namespace Business.Services;
 
 
 public interface IAddressService : IService

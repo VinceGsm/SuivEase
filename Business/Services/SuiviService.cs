@@ -1,6 +1,5 @@
-﻿using Business.I.Services;
-using DAL.I.Repos;
-using DAL.Models;
+﻿using DAL.Models;
+using DAL.Repos;
 
 namespace Business.Services;
 

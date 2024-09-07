@@ -1,4 +1,4 @@
-﻿namespace Business.I.Services;
+﻿namespace Business.Services;
 
 
 public interface IService
