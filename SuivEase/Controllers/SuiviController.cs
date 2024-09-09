@@ -16,9 +16,7 @@ public class SuivisController : ControllerBase
     {
         _suiviService = suiviService;
     }
-
-
-    //[FromQuery] //[ValidateAntiForgeryToken]
+    
 
     [HttpGet("/all/{userId}")] // GET: api/Suivis/all/userId
     public async Task<ActionResult<IEnumerable<Suivi>>> GetSuivis(string userId)
@@ -41,7 +39,7 @@ public class SuivisController : ControllerBase
     }
 
     [HttpPut("{id}")] // PUT: api/Suivis/id 
-    public async Task<IActionResult> PutSuivi(int id, Suivi suivi)
+    public async Task<IActionResult> PutSuivi(int id,[FromQuery] Suivi suivi)
     {        
         if (suivi.SuiviId != id)
             return BadRequest();
@@ -57,7 +55,7 @@ public class SuivisController : ControllerBase
     }
 
     [HttpPost] // POST: api/Suivis  
-    public async Task<ActionResult<Suivi>> PostSuivi(Suivi suivi, Address address, Contact contact)
+    public async Task<ActionResult<Suivi>> PostSuivi([FromQuery] Suivi suivi, [FromQuery] Address address, [FromQuery] Contact contact)
     {
         // TO DO : Avoir un moyen de pick dans Contact déjà existant
 

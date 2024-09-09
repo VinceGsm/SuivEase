@@ -4,17 +4,11 @@
 
 
 <MudNavMenu>
-    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
 
-    <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Counter</MudNavLink>
-    <MudNavLink Href="weather" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Cloud">Weather</MudNavLink>
-    <MudNavLink Href="documentation" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Archive">Documentation</MudNavLink>
-
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>        
     <MudNavLink Href="swagger/index.html" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List" Target="_blank">Swagger</MudNavLink>
 
-
-
-    <MudNavLink Href="auth" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Lock">Auth Required</MudNavLink>
+    <MudNavLink Href="auth" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Lock">Connection Required</MudNavLink>
     <AuthorizeView>       
         <NotAuthorized>
             @* <MudNavLink Href="Account/Register" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Person">Register</MudNavLink> // Link already in Login page*@
@@ -35,6 +29,9 @@
         </Authorized>
     </AuthorizeView>
     
+    <MudNavLink Href="documentation" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Archive">Documentation</MudNavLink>
+    <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">...</MudNavLink>
+    <MudNavLink Href="weather" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Cloud">...</MudNavLink>
 </MudNavMenu>
 
 

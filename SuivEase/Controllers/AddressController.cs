@@ -26,7 +26,7 @@ public class AddressController : ControllerBase
     }
 
     [HttpPut("{id}")] // PUT: api/Address/id 
-    public async Task<IActionResult> PutSuivi(int id, Address address)
+    public async Task<IActionResult> PutSuivi(int id, [FromQuery] Address address)
     {
         if (address.AddressId != id)
             return BadRequest();

@@ -1,6 +1,7 @@
 using Business.Services;
 using DAL.Data;
 using DAL.Repos;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -60,12 +61,21 @@ try
     builder.Services.AddTransient<IAddressRepository, AddressRepository>();
     builder.Services.AddTransient<IContactRepository, ContactRepository>();
 
-    builder.Services.AddSwaggerGen(); // Swagger
+    builder.Services.AddControllers(); // CTRL
+
+    // Swagger
+    builder.Services.AddSwaggerGen(x =>
+    {
+        x.SchemaFilter<EnumSchemaFilter>();
+
+    }); 
+
+    builder.Services.AddAntiforgery(); // Antiforgery
 
     // TO DO : comprendre ?
     builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
     
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////// BUILD ////////////////////////////////////////////////////////////
     var webApp = builder.Build();    
 
     // Configure the HTTP request pipeline.
@@ -87,7 +97,6 @@ try
     // name ?
     webApp.UseHttpsRedirection();
     webApp.UseStaticFiles();
-    webApp.UseAntiforgery();
     webApp.MapRazorComponents<App>()
         .AddInteractiveServerRenderMode()
         .AddInteractiveWebAssemblyRenderMode()        
@@ -98,8 +107,13 @@ try
 
     // name ?
     webApp.UseAuthorization();
-    webApp.MapDefaultEndpoints();
 
+    // Use routing and map endpoints
+    webApp.UseRouting();
+    webApp.UseAntiforgery(); // need to be between Routing + Endpoints
+    webApp.MapDefaultEndpoints();
+    webApp.MapControllers();
+    
     webApp.Run();
 }
 catch (Exception ex)
