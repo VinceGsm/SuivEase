@@ -8,6 +8,10 @@
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.SuivEase>("SuivEase");
+var cache = builder.AddRedis("cache");
+
+builder.AddProject<Projects.SuivEase>("SuivEase")
+    .WithExternalHttpEndpoints()
+    .WithReference(cache);
 
 builder.Build().Run();
